@@ -10,12 +10,12 @@ console.log(typeof balance);
 // null and undefined
 
 // Null : null means it is their but theri values is not defined
-Example:- 
+// Example:- 
 
 
-let firstname = null;
-let lastname = undefined;
-console.log(firstname);
-console.log(lastname);
+// let firstname = null;
+// let lastname = undefined;
+// console.log(firstname);
+// console.log(lastname);
 
 

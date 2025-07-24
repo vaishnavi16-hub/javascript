@@ -2,12 +2,16 @@
 
 
 
-let score = "23";
-if (typeof score === "number"){
-    console.log("yes thisd is a number");
-} else{
-    console.log("no this is not a number");
-}
+// let score = "23";
+// if (typeof score === "number"){
+//     console.log("yes thisd is a number");
+// } else{
+//     console.log("no this is not a number");
+// }
+
+// output:- no this is not a Number
+
+// or
 
 // let score = 23;
 // if (typeof score === "number"){
@@ -20,6 +24,9 @@ if (typeof score === "number"){
 // 
 
 
+
+// / DIFFERENCE BETWWEN THE BASIC NUM(34) AND STRING OF A NUMBER("34")
+
 // 34 → Number
 // This is a numeric value
 
@@ -29,9 +36,7 @@ if (typeof score === "number"){
 
 //  Example:
 
-// javascript
-// Copy
-// Edit
+
 // let a = 34;
 // console.log(typeof a); // number
 
@@ -45,8 +50,6 @@ if (typeof score === "number"){
 
 //  Example:
 
-// javascript
-// Copy
-// Edit
+
 // let b = "34";
 // console.log(typeof b); // string
