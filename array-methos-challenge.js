@@ -85,17 +85,17 @@
 // 3. write  a function countVowels(str) that return the number of vowels (in both lower and uppercase) in the given string str.
 
 
- function countVowels(str) {
-  const vowels = 'aeiouAEIOU';
-  let count = 0;
+//  function countVowels(str) {
+//   const vowels = 'aeiouAEIOU';
+//   let count = 0;
 
-  for (let char of str) {
-    if (vowels.includes(char)) {
-      count++;
-    }
-  }
+//   for (let char of str) {
+//     if (vowels.includes(char)) {
+//       count++;
+//     }
+//   }
 
-  return count;
-}
+//   return count;
+// }
 
-console.log(countVowels("hello world")); //  Output: 3
+// console.log(countVowels("hello world")); //  Output: 3

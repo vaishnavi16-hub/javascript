@@ -30,3 +30,5 @@
 // let vaishnavi = new Person("vaishnavi gaikwad" , 20);
 // console.log(vaishnavi.name);// vaishnavi gaikwad
 // console.log(vaishnavi.age);// 20
+
+

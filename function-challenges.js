@@ -45,14 +45,14 @@
 
 
 
-function isItTruthy(input) {
-    if (input) {
-        return "It's truthy!";
-    } else {
-        return "It's falsey!";
-    }
-}
+// function isItTruthy(input) {
+//     if (input) {
+//         return "It's truthy!";
+//     } else {
+//         return "It's falsey!";
+//     }
+// }
 
-console.log(isItTruthy(true));//  t's truthy!
-// console.log(isItfalsy!(false));
-console.log(isItTruthy("vaishu"));
+// console.log(isItTruthy(true));//  t's truthy!
+// // console.log(isItfalsy!(false));
+// console.log(isItTruthy("vaishu"));
