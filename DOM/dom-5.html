@@ -1,0 +1,62 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: rgb(104, 13, 104);
+            text-align: center;
+            color: white;
+        }
+        #tealist{
+            cursor:pointer;
+
+        }
+        
+    </style>
+    </head>
+    <body>
+    
+    <!-- EVENT DELEGATION.. -->
+
+    <section id="example">
+        <h2>Event Delegation</h2>
+        <ul id="tealist">
+            <li class="teaItem">Green Tea</li>
+            <li class="teaItem">Black tea</li>
+            <li class="teaItem">Green Tea</li>
+        </ul>
+        <p >Click on any tea select it!.</p>
+        <hr>
+
+
+
+        <!-- FORM HANDLING... -->
+
+        <section id="form">
+            <h2>Form Handling</h2>
+            <form id="feedbackform">
+                <label for="feedbackInput">Your Feedback</label>
+                <input type="text" id="feedbackInput" placeholder="Enter Feedback">
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <p id="feedbackDisplay"></p>
+
+        </section>
+
+    </section>
+    <script>
+
+        // 1..
+
+        document.getElementById("tealist").addEventListener("click", function (event) {
+            if (event.target && event.target.matches(".teaItem")){
+         alert("You selected:" + event.target.textContent);
+            }
+        });  
+    </script>
+    </body>
+    </html>

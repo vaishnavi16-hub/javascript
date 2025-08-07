@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom practice</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: black;
+             color: white;
+             
+        }
+    </style>
+</head>
+<body>
+    <h1>FIRST CHALLENGE</h1>
+
+    <p id="mypara">Click me to change my csaolor</p>
+    <h1 id="vaishu">hello vaishnavi</h1>
+    <hr>
+
+    <h1>SECOND CHALLENGE</h1>
+    <P id="hideme">Hide me by clickung the button!</P>
+    <button onclick="document.getElementById('hideme').style.display='none'">Hide</button>
+    <hr>
+
+       <h1>Add border on mouse entrer , remove on mouse leave</h1>    
+        <div id="hoverbox" style="width: 100px; height: 100px; background-color: lightgray;">hello!</div>
+    <hr>
+   
+<button id="togglebtn">Start</button>
+<hr>
+
+
+<h1>light dark mode</h1>
+<label for="">
+    <input type="checkbox" id="modetoggle">Dark mode
+</label>
+
+<hr>
+
+
+<input type="checkbox" id="agreeBox" /> I agree to terms
+  <br>
+  <button id="submitBtn" disabled>Submit</button>
+
+
+</body>
+<script>
+
+    // 1...
+    // document.getElementById("mypara").addEventListener("click",function(){
+    //     this.style.color ="blue";
+    // })
+
+    // document.getElementById("vaishu").addEventListener("click",function(){
+    //     this.style.backgroundColor="pink";
+    //     this.style.fontSize="50px";
+    //     this.style.fontFamily="sansarif";
+    // })
+
+
+    // 3...
+    // const box = document.getElementById("hoverbox");
+    // box.addEventListener("mouseenter",() => box.style.border = "3px solid red");
+    // box.addEventListener("mouseleave", () => box.style.border = "none");
+    // box.addEventListener("mouseenter",() =>box.style.backgroundColor ="pink");
+    // box.addEventListener("mouseenter",() =>box.style.fontSize="50px");
+
+    // const btn = document.getElementById("togglebtn");
+    // btn.addEventListener("click", function(){
+    //     this.innerText = this.innerText == "Start" ? "Stop" :"Start";
+    // });
+
+
+    // 4...
+    // document.getElementById("modetoggle").addEventListener("change",function(){
+    //     document.body.style.backgroundColor = this.checked ?"#333": "#fff";
+    //     document.body.style.color = this.checked? "#fff" :"#000";
+    // })
+
+
+    // 5...
+    document.getElementById("agreeBox").addEventListener("change", function() {
+      document.getElementById("submitBtn").disabled = !this.checked;
+    });
+    
+   
+</script>
+</html>

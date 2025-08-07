@@ -1,0 +1,38 @@
+body {
+    font-family:Arial;
+    padding:20px;
+    text-align: center;
+    /* background-color: black;s */
+    color: white;
+}
+
+#colorBox {
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+    margin: 10px 0;
+    padding: 10px ;
+}
+
+#hoverText{
+    transition: font-size 0.3s;
+
+}
+#hoverText:hover{
+    font-size:24px;
+    color: green;
+
+}
+
+#toggleDiv {
+    width: 200px;
+    height: 50px;
+    background: #eee;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.dark {
+     background: black; 
+    color: white;
+    }
