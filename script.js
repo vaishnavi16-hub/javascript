@@ -21,36 +21,37 @@ document.addEventListener('DOMContentLoaded', () => {
     products.forEach(product => {
         const productDiv = document.createElement('div');
         productDiv.classList.add('product');
-        
-        // ✅ use backticks and include button inside
         productDiv.innerHTML = `
             <span>${product.name} - $${product.price.toFixed(2)}</span>
             <button data-id="${product.id}">Add to Cart</button>
         `;
-
         productList.appendChild(productDiv);
     });
 
-    // ✅ FIXED: typo (addEventListener)
+    // Add to cart
     productList.addEventListener('click', (e) => {
         if (e.target.tagName === "BUTTON") {
             const productId = parseInt(e.target.getAttribute("data-id"));
-            // ✅ FIXED: use products instead of product
             const product = products.find(p => p.id === productId);
-            addToCart(product);
+            if (product) {
+                cart.push(product);
+                renderCart();
+            }
         }
     });
 
-    // Add to cart
-    function addToCart(product) {
-        cart.push(product);
-        console.log(cart); // ✅ Show updated cart in console
-        renderCart();
-    }
+    // Event delegation for remove buttons
+    cartItems.addEventListener('click', (e) => {
+        if (e.target.classList.contains("remove-btn")) {
+            const index = parseInt(e.target.getAttribute("data-index"));
+            cart.splice(index, 1);
+            renderCart();
+        }
+    });
 
     // Render the cart
     function renderCart() {
-        cartItems.innerHTML = ""; // ✅ clear before rendering
+        cartItems.innerHTML = "";
 
         if (cart.length === 0) {
             emptyCartMessage.style.display = "block";
@@ -63,11 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let total = 0;
 
-        cart.forEach(item => {
+        cart.forEach((item, index) => {
             const li = document.createElement("li");
-            li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            li.innerHTML = `
+                ${item.name} - $${item.price.toFixed(2)}
+                <button class="remove-btn" data-index="${index}">Remove</button>
+            `;
             cartItems.appendChild(li);
-
             total += item.price;
         });
 
